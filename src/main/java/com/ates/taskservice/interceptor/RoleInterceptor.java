@@ -1,6 +1,5 @@
 package com.ates.taskservice.interceptor;
 
-import static com.ates.taskservice.utils.ContextRoleHolder.remove;
 import static com.ates.taskservice.utils.ContextRoleHolder.setUserRoles;
 import static com.ates.taskservice.utils.JwtUtils.getJwtWithoutSignature;
 import static com.ates.taskservice.utils.JwtUtils.getTokenFromRequest;
@@ -36,14 +35,10 @@ public class RoleInterceptor implements HandlerInterceptor {
       @NonNull HttpServletResponse response,
       @NonNull Object handler
   ) {
-    try {
-      final String token = getTokenFromRequest(request);
-      final List<Role> roleList = getRoleListFromJwtToken(token);
-      setUserRoles(roleList);
-      return true;
-    } finally {
-      remove();
-    }
+    final String token = getTokenFromRequest(request);
+    final List<Role> roleList = getRoleListFromJwtToken(token);
+    setUserRoles(roleList);
+    return true;
   }
 
   private List<Role> getRoleListFromJwtToken(String token) {

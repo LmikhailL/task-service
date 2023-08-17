@@ -14,6 +14,7 @@ public class UserSavedEventMapperImpl implements UserSavedEventMapper {
     userCudEntity.setUserKeycloakId(event.getUserKeycloakId());
     userCudEntity.setFirstName(event.getFirstName());
     userCudEntity.setLastName(event.getLastName());
+    userCudEntity.setRole(event.getRole());
     return userCudEntity;
   }
 }

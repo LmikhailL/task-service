@@ -30,7 +30,7 @@ public class UserCudEntity {
   @Column(name = "first_name")
   private String firstName;
 
-  @Column(name = "lastName")
+  @Column(name = "last_name")
   private String lastName;
 
   @Column(name = "role")
