@@ -1,0 +1,16 @@
+spring:
+  #Kafka config
+  kafka:
+    consumer:
+      group-id: task-service
+      bootstrap-servers: http://localhost:9092
+      auto-offset-reset: earliest
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+    security:
+      protocol: PLAINTEXT
+    topics:
+      user-saved-topic: user-saved
+      task-created-topic: task-created
+      task-updated-topic: task-updated
+    bootstrap-servers: http://localhost:9092
