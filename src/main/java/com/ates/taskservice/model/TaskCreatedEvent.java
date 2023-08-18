@@ -9,4 +9,6 @@ public class TaskCreatedEvent {
   private Long id;
   private String taskStatus;
   private BigDecimal amountOfMoneyToCharge;
+  private String title;
+  private Long jiraId;
 }

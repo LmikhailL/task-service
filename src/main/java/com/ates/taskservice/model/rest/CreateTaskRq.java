@@ -5,5 +5,7 @@ import lombok.Data;
 @Data
 public class CreateTaskRq {
 
+  private String title;
+  private Long jiraId;
   private String description;
 }

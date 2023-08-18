@@ -45,6 +45,12 @@ public class TaskEntity {
   @Column(name = "amount_of_money_to_pay")
   private BigDecimal amountOfMoneyToPay;
 
+  @Column(name = "title")
+  private String title;
+
+  @Column(name = "jira_id")
+  private String jiraId;
+
   @OneToOne(cascade = ALL, optional = false, fetch = LAZY)
   @JoinColumn(name = "users_cud_id")
   private UserCudEntity userCudEntity;

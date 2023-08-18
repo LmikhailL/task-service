@@ -14,6 +14,8 @@ public class TaskCreatedEventMapperImpl implements TaskCreatedEventMapper {
     event.setId(savedTask.getId());
     event.setTaskStatus(savedTask.getTaskStatus().name());
     event.setAmountOfMoneyToCharge(savedTask.getAmountOfMoneyToCharge());
+    event.setJiraId(event.getJiraId());
+    event.setTitle(event.getTitle());
     return event;
   }
 }

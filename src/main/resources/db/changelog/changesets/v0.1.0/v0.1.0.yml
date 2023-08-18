@@ -51,3 +51,12 @@ databaseChangeLog:
                   constraints:
                     foreignKeyName: tasks_users_cud_fk
                     references: users_cud(id)
+        - addColumn:
+            tableName: tasks
+            columns:
+              - column:
+                  name: title
+                  type: varchar
+              - column:
+                  name: jira_id
+                  type: bigint
