@@ -9,4 +9,6 @@ public class TaskUpdatedEvent {
   private Long id;
   private TaskStatus taskStatus;
   private BigDecimal amountOfMoneyToPay;
+  private String title;
+  private Long jiraId;
 }

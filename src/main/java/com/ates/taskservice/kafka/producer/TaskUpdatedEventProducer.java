@@ -1,6 +1,6 @@
 package com.ates.taskservice.kafka.producer;
 
-import com.ates.taskservice.model.TaskUpdatedEvent;
+import com.avro.events.streaming.TaskUpdatedEvent;
 
 public interface TaskUpdatedEventProducer {
 
