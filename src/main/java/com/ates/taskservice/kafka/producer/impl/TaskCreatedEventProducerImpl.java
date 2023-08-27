@@ -4,7 +4,7 @@ import static com.ates.taskservice.utils.MdcUtils.getCorrelationId;
 
 import com.ates.taskservice.kafka.producer.ProducerTemplate;
 import com.ates.taskservice.kafka.producer.TaskCreatedEventProducer;
-import com.ates.taskservice.model.TaskCreatedEvent;
+import com.avro.events.streaming.TaskCreatedEvent;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;

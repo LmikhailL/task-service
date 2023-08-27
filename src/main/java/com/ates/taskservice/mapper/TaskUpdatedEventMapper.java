@@ -1,7 +1,7 @@
 package com.ates.taskservice.mapper;
 
 import com.ates.taskservice.entity.TaskEntity;
-import com.ates.taskservice.model.TaskUpdatedEvent;
+import com.avro.events.streaming.TaskUpdatedEvent;
 
 public interface TaskUpdatedEventMapper {
 

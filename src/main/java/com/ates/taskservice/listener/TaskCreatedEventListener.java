@@ -1,7 +1,7 @@
 package com.ates.taskservice.listener;
 
 import com.ates.taskservice.kafka.producer.TaskCreatedEventProducer;
-import com.ates.taskservice.model.TaskCreatedEvent;
+import com.avro.events.streaming.TaskCreatedEvent;
 import lombok.RequiredArgsConstructor;
 import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Component;

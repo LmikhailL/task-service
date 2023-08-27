@@ -59,4 +59,4 @@ databaseChangeLog:
                   type: varchar
               - column:
                   name: jira_id
-                  type: bigint
+                  type: varchar

@@ -6,6 +6,6 @@ import lombok.Data;
 public class CreateTaskRq {
 
   private String title;
-  private Long jiraId;
+  private String jiraId;
   private String description;
 }

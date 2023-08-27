@@ -1,19 +1,16 @@
 package com.ates.taskservice.entity;
 
-import static jakarta.persistence.CascadeType.ALL;
 import static jakarta.persistence.EnumType.STRING;
-import static jakarta.persistence.FetchType.LAZY;
 import static jakarta.persistence.GenerationType.IDENTITY;
 
 import com.ates.taskservice.model.TaskStatus;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Enumerated;
-import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
-import jakarta.persistence.OneToOne;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 import java.math.BigDecimal;
 import lombok.Getter;
@@ -51,12 +48,12 @@ public class TaskEntity {
   @Column(name = "jira_id")
   private String jiraId;
 
-  @OneToOne(cascade = ALL, optional = false, fetch = LAZY)
+  @ManyToOne
   @JoinColumn(name = "users_cud_id")
   private UserCudEntity userCudEntity;
 
   public void addUser(UserCudEntity toAdd) {
     this.userCudEntity = toAdd;
-    toAdd.setTaskEntity(this);
+    toAdd.getTaskEntity().add(this);
   }
 }

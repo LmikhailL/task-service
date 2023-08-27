@@ -20,6 +20,8 @@ public class CreateTaskRqMapperImpl implements CreateTaskRqMapper {
     taskEntity.setDescription(rq.getDescription());
     taskEntity.setAmountOfMoneyToCharge(getAmountOfMoneyToCharge());
     taskEntity.setAmountOfMoneyToPay(getAmountOfMoneyToPay());
+    taskEntity.setJiraId(rq.getJiraId());
+    taskEntity.setTitle(rq.getTitle());
     return taskEntity;
   }
 

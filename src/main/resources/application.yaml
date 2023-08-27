@@ -10,3 +10,4 @@ spring:
     url: jdbc:postgresql://localhost:10910/tasks
   liquibase:
     change-log: db/changelog/changelog-master.yml
+    enabled: false

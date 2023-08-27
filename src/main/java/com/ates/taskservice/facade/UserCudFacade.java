@@ -1,6 +1,6 @@
 package com.ates.taskservice.facade;
 
-import com.ates.taskservice.model.UserSavedEvent;
+import com.avro.events.streaming.UserSavedEvent;
 
 public interface UserCudFacade {
 

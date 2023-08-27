@@ -31,9 +31,10 @@ public class UserCudServiceImpl implements UserCudService {
   public UserCudEntity getRandomUser() {
     log.info("Started getting random user to assign task...");
 
-    List<UserCudEntity> users = userCudEntityRepository.findByRoleNotLikeAndRoleNotLike(
-        "ADMIN_POPUG",
-        "MANAGER_POPUG"
+    List<UserCudEntity> users = userCudEntityRepository.findByRoleNotIn(List.of(
+            "ADMIN_POPUG",
+            "MANAGER_POPUG"
+        )
     );
 
     if (isEmpty(users)) {
